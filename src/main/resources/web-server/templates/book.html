@@ -1,0 +1,31 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="header :: copy"></head>
+
+<body>
+	<h1>Book Details</h1>
+<form action="#" th:object="${modifCriteria}" method="POST"
+		th:action="@{/books/domodif/}" class="form-horizontal">
+	<dl class="dl-horizontal">
+		<dt>Number</dt>
+		<dd th:text="${book.number}">number th:field = "${bookNumber))</dd>
+		<dt>Author</dt>
+		<dd th:text="${book.author}"></dd>
+		<dt>Title</dt>
+		<dd th:text="${book.title}">Title</dd>
+	</dd>
+	</dl>
+		<button type="submit" class="btn btn-primary">Add to cart</button>
+</form>
+	<div style="height: 2cm">&nbsp;</div>
+
+	<div style="text-align: right">
+		Options: <a th:href="@{/}">Home</a> | <a
+			th:href="@{/books/search}">Book Search</a>
+	</div>
+
+	<div th:replace="footer :: copy"></div>
+</body>
+</html>

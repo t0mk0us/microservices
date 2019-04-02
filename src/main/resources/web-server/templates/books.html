@@ -1,0 +1,48 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="header :: copy"></head>
+
+<body>
+	<h1>Books by Title</h1>
+	<div th:if="not ${books}" class="error">
+		No books found containing '<span th:text="${searchText}">searchText</span>'.
+		<div style="height: 2cm">&nbsp;</div>
+	</div>
+
+	<div th:if="${books}">
+		<p>
+			Books whose author name contains ' <span th:text="${searchText}">searchText</span>'
+			are:
+		</p>
+
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Book Number</th>
+					<th>Author</th>
+					<th>Title</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="book : ${books}">
+					<td><a href="book.html"
+						th:href="@{|/books/${book.number}|}"
+						th:text="|${book.number}|">11111111</a></td>
+					<td th:text="${book.author}">Author</td>
+					<td th:text="${book.title}">Title</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div style="text-align: right">
+		Options: <a th:href="@{/}">Home</a> | <a
+			th:href="@{/books/search}">Book Search</a>
+	</div>
+
+	<div th:replace="footer :: copy"></div>
+</body>
+</html>

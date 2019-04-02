@@ -1,0 +1,95 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="header :: copy"></head>
+
+<body>
+	<h1>Book Search</h1>
+
+	<p>Enter the book number or search for the book author
+		containing given specified text:</p>
+
+	<form action="#" th:object="${searchCriteria}" method="GET"
+		th:action="@{/books/dosearch}" class="form-horizontal">
+
+		<!-- Book Number field -->
+		<div class="form-group">
+			<label for="number" class="control-label col-xs-2">Book
+				Number</label>
+	
+			
+			<div class="col-xs-8">Enter a valid 9 digit number<div class="col-xs-2">
+				<input type="text" class="form-control" id="number" th:field="*{bookNumber}" placeholder="Enter book number" style="width: 10em;">
+			</div></div>
+		</div>
+
+		<!-- Book Numbe errors (if any) -->
+		<div class="form-group">
+			<div class="control-label col-xs-2">&nbsp;</div>
+			<div class="col-xs-2">&nbsp;</div>
+			<div class="col-xs-8">
+				<span th:if="${#fields.hasErrors('bookNumber')}"
+					style="color: red; font-size: smaller" th:errors="*{bookNumber}">Incorrect
+					data</span>
+			</div>
+		</div>
+
+		<!-- Author name field -->
+		<div class="form-group">
+			<label for="search" class="control-label col-xs-2">Author
+				Search</label>
+			<div class="col-xs-2">
+				<input type="text" class="form-control" id="search"
+					th:field="*{searchText}" placeholder="Text from author name"
+					style="width: 10em;" />
+			</div>
+			<div class="col-xs-8">Case-insensitive, supports part name
+				matching</div>
+		</div>
+		
+		<!-- Book title field -->
+		<div class="form-group">
+			<label for="search" class="control-label col-xs-2">Book Title
+				Search</label>
+			<div class="col-xs-2">
+				<input type="text" class="form-control" id="title"
+					th:field="*{searchTitle}" placeholder="Text from book title"
+					style="width: 10em;" />
+			</div>
+			<div class="col-xs-8">Case-insensitive, supports part name
+				matching</div>
+		</div>
+
+		<!-- Author name errors (if any) -->
+		<div class="form-group">
+			<div class="control-label col-xs-2">&nbsp;</div>
+			<div class="col-xs-2">&nbsp;</div>
+			<div class="col-xs-8">
+				<span th:if="${#fields.hasErrors('searchText')}"
+					style="color: red; font-size: smaller" th:errors="*{searchText}"></span>
+			</div>
+		</div>
+		
+				<!-- Book title errors (if any) -->
+		<div class="form-group">
+			<div class="control-label col-xs-2">&nbsp;</div>
+			<div class="col-xs-2">&nbsp;</div>
+			<div class="col-xs-8">
+				<span th:if="${#fields.hasErrors('searchTitle')}"
+					style="color: red; font-size: smaller" th:errors="searchTitle"></span>
+			</div>
+		</div>
+
+		<!--  Submit button -->
+		<div class="form-group">
+			<div class="col-xs-offset-2 col-xs-10">
+				<button type="submit" class="btn btn-primary">Find</button>
+			</div>
+		</div>
+	</form>
+
+	<div th:replace="footer :: copy"></div>
+
+</body>
+</html>

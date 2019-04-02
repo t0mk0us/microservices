@@ -1,0 +1,25 @@
+
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456789', 'Ruth Rendell', 'The Water is Lovely');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456001', 'Ruth Rendell', 'Tigerlily Orchids');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456002', 'Ruth Rendell', 'The St. Zita Society');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456003', 'Ruth Rendell', 'The Blood Doctor');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456004', 'Ruth Rendell', 'Adam and Eve and Pinch Me');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456005', 'Kathy Reichs', 'Deja DEAD');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456006', 'Kathy Reichs', 'Monday Mourning');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456007', 'Kathy Reichs', 'Bones of the Lost');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456008', 'Kathy Reichs', 'Death du Jour');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456009', 'Kathy Reichs', 'Fatal Voyage');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456010', 'Umberto Eco', 'La Pendule de Foucault');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456011', 'George Orwell', '1984');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456012', 'Patricia Cornell', 'Postmortem');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456013', 'Patricia Cornell', 'Body of Evidence');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456014', 'Patricia Cornell', 'Body Farme');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456015', 'Amelie Nothomb', 'Stupeur et Tremblement');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456016', 'Amelie Nothomb', 'Hygiene de l assassin');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456017', 'Amelie Nothomb', 'Ni d’Eve ni d’Adam.');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456018', 'Amelie Nothomb', 'Antéchrista');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456019', 'Henning Mankell', 'L’Homme qui souriait');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456020', 'Henning Mankell', 'Les Morts de la Saint-Jean');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456021', 'Henning Mankell', 'Les Chiens de Riga ');
+insert into T_BOOK (NUMBER, AUTHOR, TITLE) values ('123456022', 'Henning Mankell', 'L’Homme inquiet');
+insert into T_USER (NUMBER, NAME, PASSWORD) values ('1234567', 'Tamara Melnikova', '123456');
